@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+
+  .logo {
+    height: 48px;
+    width: auto;
+  }
+
+  .nav-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.60rem;
+    font-family: 'Orbitron', monospace;
+
+    .date-time {
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--text-dim);
+      letter-spacing: 0.2em;
+    }
+    .instagram-link {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.1em;
+    }
+
+    .email {
+      font-size: 0.6rem;
+      font-weight: 400;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+    }
+  }
+}

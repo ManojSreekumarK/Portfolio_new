@@ -1,0 +1,40 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg:            #0d0b08;
+  --bg-alt:        #ffffff;
+  --text:          #FF00FF;
+  --text-dim:      #FF00FF;
+  --text-dark:     #FF00FF;
+  --text-dark-dim: #FF00FF;
+  --border:        #df4adf;
+  --border-dark:   #FF00FF;
+  --gold:          #c8b47e;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-mono {
+  font-family: 'Space Mono', 'Courier New', monospace;
+}
