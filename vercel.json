@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "cd redefine-portfolio && npm ci",
+  "buildCommand": "cd redefine-portfolio && npm run build",
+  "outputDirectory": "redefine-portfolio/dist/redefine-portfolio/browser",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
