@@ -1,59 +1,40 @@
-# RedefineLabs
+# Manoj Sreekumar, portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+Angular 21, prerendered to static HTML. Design rules and the concept live in [DESIGN.md](DESIGN.md).
 
-## Development server
-
-To start a local development server, run:
+## Run
 
 ```bash
-ng serve
+npm install
+npm start                 # dev server at http://localhost:4200
+npm run build             # production build + 404.html → dist/redefine-portfolio/browser
+npm run serve:dist        # serve that build at http://127.0.0.1:4400
+npm run figure            # rebuild Fig 1 (the quantum computer) and run its geometry audit
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Where things live
 
-## Code scaffolding
+| What | Where |
+|---|---|
+| All copy, projects, skills, links | `src/app/data/site.ts` |
+| Project screenshots | `public/work/` |
+| Pages | `src/app/pages/` (home, case, about, not-found) |
+| Header, footer, focus scale, clock | `src/app/shell/` |
+| Motion engine (GSAP + Lenis, page lifecycle) | `src/engine/` (Angular adapter: `angular.ts`) |
+| Focus driver, iris transition, previews | `src/motion/` |
+| Fig 1 source (anatomy kit) and live code | `scripts/figure/cryostat.mjs`, `src/app/figure/cryostat.ts` |
+| Styles | `src/styles.scss` |
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Deploy
 
-```bash
-ng generate component component-name
-```
+The build output is a static folder, `dist/redefine-portfolio/browser`. Point any static host at it,
+for example Vercel (`npx vercel --prod`, output directory `dist/redefine-portfolio/browser`) or Netlify.
+Unknown paths should serve `404.html` with a 404 status (both hosts do this by default).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## To confirm or replace
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `site.url` in `src/app/data/site.ts` (also `public/robots.txt`, `public/sitemap.xml`, and the
+  JSON-LD in `src/index.html`) uses the existing Vercel address; change it if the new site gets a domain.
+- The case study copy for Brands.io, Taste Now and Dentics is written from what the live sites show.
+- The three "How I work" principles on the About page are written in your voice; edit freely.
+- Screenshots in `public/work/` were taken from the live sites; swap in design files if you prefer.

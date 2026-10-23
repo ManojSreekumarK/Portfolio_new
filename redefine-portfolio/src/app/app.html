@@ -1,3 +1,21 @@
-<app-navbar />
-<img src="images/grainy-2.png" alt="not found" class="grainy">
-<app-hero />
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Aperture iris (page transitions). The mask's hexagon is the opening; the hairline lights the blade edge. -->
+<div id="curtain" aria-hidden="true">
+  <svg class="iris" viewBox="0 0 1440 900" preserveAspectRatio="none">
+    <defs>
+      <mask id="iris-mask" maskUnits="userSpaceOnUse" x="-10000" y="-10000" width="20000" height="20000">
+        <rect x="-10000" y="-10000" width="20000" height="20000" fill="#fff" />
+        <g data-iris-at><polygon data-iris-hex fill="#000" points="0,0" /></g>
+      </mask>
+    </defs>
+    <rect class="iris__blades" x="-10000" y="-10000" width="20000" height="20000" mask="url(#iris-mask)" />
+    <g data-iris-at><polygon class="iris__edge" data-iris-hex points="0,0" /></g>
+  </svg>
+</div>
+
+<app-header />
+<main id="main" tabindex="-1"><router-outlet /></main>
+<app-footer />
+<app-focus-scale />

@@ -1,0 +1,38 @@
+/* Fig 1 in the site palette. No card: the drawing's paper is the page ground itself, and the solids
+   are lifted a few steps above it (warm greys, about 3% apart) so the machine reads as a lit object. */
+.bench.iso {
+  display: block;
+  width: min(100%, calc((100svh - 8rem) * 0.77));
+  margin-inline: auto;
+  --anatomy-page: #0d0b08;
+  --anatomy-card: #0d0b08;
+  --anatomy-paper: #0d0b08;
+  --anatomy-face: #3a332b;
+  --anatomy-top: #4a4137;
+  --anatomy-shade-0: #221d18;
+  --anatomy-shade-1: #2a241e;
+  --anatomy-shade-2: #322b24;
+  --anatomy-shade-3: #3b332b;
+  --anatomy-lit-top: #5a2c57;
+  --anatomy-lit-shade: #3d1f3b;
+  --anatomy-hi: #f2eee8;
+  --anatomy-mid: #a49d92;
+  --anatomy-lo: #6e675d;
+  --anatomy-faint: #4a443c;
+  --anatomy-lit: #ff2bf6;
+  --anatomy-dot: #f2eee8;
+  --anatomy-halo: #000;
+  --anatomy-halo-opacity: 0.85;
+  --anatomy-text: #9b958b;
+  --anatomy-strong: #f2eee8;
+  --anatomy-muted: #9b958b;
+  --anatomy-weight: 0.7px;
+}
+.bench__stage {
+  outline-offset: 6px;
+  cursor: ns-resize;
+  touch-action: pan-y;
+}
+.bench__stage:focus-visible {
+  outline: 1px solid #ff2bf6;
+}

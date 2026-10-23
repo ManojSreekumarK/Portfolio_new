@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manoj-portfolio-swart.vercel.app/sitemap.xml
